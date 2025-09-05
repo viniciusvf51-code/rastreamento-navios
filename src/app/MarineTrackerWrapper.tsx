@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic';
 
+"use client";
 // Importação dinâmica do componente principal para evitar problemas de SSR com Leaflet
 const MarineTrackerComponent = dynamic(() => import('./MarineTrackerComponent'), {
   ssr: false,
@@ -15,4 +16,5 @@ const MarineTrackerComponent = dynamic(() => import('./MarineTrackerComponent'),
 
 export default function MarineTracker() {
   return <MarineTrackerComponent />;
+  
 }
